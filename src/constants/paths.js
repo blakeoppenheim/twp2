@@ -1,5 +1,5 @@
 import { objectDestruction } from "./../utils/objectDestruction";
-export const PREFIX = import.meta.env.VITE_PREFIX;
+export const PREFIX = "TWP";
 
 const simplePaths = {
   home: "/home",
