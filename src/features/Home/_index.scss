@@ -1,0 +1,58 @@
+@keyframes bottomAllBottle {
+  0% {
+    bottom: -35%;
+  }
+  50% {
+    bottom: -25px;
+  }
+  65% {
+    bottom: -25px;
+  }
+  100% {
+    bottom: -35%;
+  }
+}
+@keyframes bottomBottle {
+  0% {
+    top: 0%;
+  }
+  50% {
+    top: 12%;
+  }
+  65% {
+    top: 12%;
+  }
+  100% {
+    top: 0%;
+  }
+}
+
+.header-section {
+  background: rgb(0, 36, 69);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 36, 69, 1) 0%,
+    rgba(113, 178, 255, 1) 99%
+  );
+  height: calc(100vh - 100.5px);
+  position: relative;
+  overflow: hidden;
+
+  & > .bottle-icon {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -35%;
+    animation: bottomAllBottle 2.8s ease-in-out;
+    z-index: 1;
+  }
+  & > .bottle-head {
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    animation-delay: 1s;
+    animation: bottomBottle 2.8s ease-in-out;
+    transform: translateX(-50%);
+    z-index: 3;
+  }
+}

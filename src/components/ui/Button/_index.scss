@@ -1,0 +1,25 @@
+.button {
+  outline: none;
+  border: none;
+  color: #002445;
+  line-height: 18px;
+  font-weight: bold;
+  font-size: 14px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.6s ease-in-out;
+  border: 1px solid transparent;
+  border-radius: 0.3rem !important;
+  &:hover {
+    border: 1px solid white;
+    background-color: #002445;
+    color: white;
+  }
+
+  &:disabled {
+    background-color: #b3b1b1;
+    color: #ebebeb;
+    border: 1px solid #b3b1b1;
+    cursor: not-allowed;
+  }
+}

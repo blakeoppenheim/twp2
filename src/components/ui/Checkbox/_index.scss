@@ -1,0 +1,30 @@
+.checkbox_container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  cursor: pointer;
+  span {
+    font-weight: 400;
+    font-size: 0.875rem;
+    color: #617082;
+  }
+  .checkbox {
+    display: inline-block;
+    border: 1px solid #cbd5e1;
+    border-radius: 5px;
+    height: 22px;
+    width: 22px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .checked {
+    background: #1f8af4;
+    border: 1px solid #1f8af4;
+  }
+  &:hover .checkbox {
+    border: 1px solid #1f8af4;
+  }
+}

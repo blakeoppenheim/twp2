@@ -1,0 +1,20 @@
+.collapse {
+  max-height: 0;
+  transition: all 0.3s ease-in-out;
+  visibility: hidden;
+  opacity: 0;
+  animation: fade-in 0.3s ease-in-out;
+  &.open {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
