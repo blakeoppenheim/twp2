@@ -1,5 +1,5 @@
 import { objectDestruction } from "./../utils/objectDestruction";
-export const PREFIX = "TWP";
+export const PREFIX = "twp";
 
 const simplePaths = {
   home: "/home",
