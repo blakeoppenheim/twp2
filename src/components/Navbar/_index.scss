@@ -24,16 +24,13 @@
     color: #ffffff;
     cursor: pointer;
     & > .list-item {
-      & > .link-active {
-        all: unset;
-        opacity: 1;
-        animation: show 0.3s ease-in-out;
-      }
-
+      color: white;
       & > .link {
-        opacity: 0.5;
         all: unset;
-        opacity: 1;
+        opacity: 0.5;
+      }
+      & > .link-active {
+        opacity: 1 !important;
         animation: show 0.3s ease-in-out;
       }
     }
