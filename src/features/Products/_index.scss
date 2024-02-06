@@ -1,0 +1,131 @@
+.products-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: calc(100vh - 100.5px);
+  background-color: #e8f1fe;
+  & > .products-container__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    & > .product-image__container {
+      flex-basis: 35%;
+      position: relative;
+      & > .bottle-image {
+        width: 93%;
+        height: 570px;
+        object-fit: cover;
+      }
+
+      & > .image-description {
+        position: absolute;
+        right: -90px;
+        bottom: 30%;
+        max-width: 237px;
+        font-size: 1.4rem;
+        font-weight: 300;
+        text-align: center;
+        line-height: 20px;
+      }
+    }
+
+    & > .product-details__container {
+      flex-basis: 40%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+
+      & > .product-material {
+        color: #838383;
+        font-weight: bold;
+        font-size: 1.8rem;
+      }
+
+      & > .product-title {
+        font-size: 6.3rem;
+        font-weight: bold;
+        color: #002445;
+
+        & > .title {
+          color: #2e75a9;
+        }
+
+        & > .point {
+          color: #2e75a9;
+        }
+      }
+
+      & > .product-detail {
+        color: #002445;
+        font-size: 1.7rem;
+        text-align: end;
+        line-height: 26px;
+        width: 85%;
+        position: relative;
+        margin-top: 20px;
+        &::before {
+          position: absolute;
+          content: "";
+          right: 0%;
+          top: -15px;
+          height: 3.5px;
+          background-color: #002445;
+          width: 40%;
+        }
+
+        & > .special-word {
+          color: #2e75a9;
+          font-weight: bold;
+          padding-inline: 5px;
+        }
+      }
+
+      & > .buttons-action__container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 10px;
+        margin-top: 40px;
+        width: 100%;
+        & > button {
+          all: unset;
+          height: 44px;
+          flex-basis: 28%;
+          border-radius: 45px !important;
+          background-color: #002445;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 14px;
+          cursor: pointer;
+          font-size: 1.5rem;
+          color: white;
+          font-weight: 500;
+        }
+
+        & > .active {
+          background-color: white;
+          border: 2px solid #00406e;
+          color: #00406e;
+        }
+      }
+    }
+  }
+
+  & > .products-container__footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 110px;
+    & > .list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      color: #002445;
+      font-size: 2.1rem;
+      font-weight: 500;
+    }
+  }
+}
