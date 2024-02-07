@@ -7,8 +7,18 @@ import location from "./../../assets/icons/location.svg";
 function Contact() {
   return (
     <section className="contact-page__container">
-      <h1 className="contact-title">Contact Us</h1>
-      <article className="form-contact__container">
+      <h1
+        data-aos-duration="1000"
+        data-aos="fade-down"
+        className="contact-title"
+      >
+        Contact Us
+      </h1>
+      <article
+        data-aos-duration="1500"
+        data-aos="flip-left"
+        className="form-contact__container"
+      >
         <div className="form-information__container">
           <h2 className="form-information__title">Contact Information</h2>
           <div className="form-information__details">

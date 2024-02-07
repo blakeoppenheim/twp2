@@ -44,6 +44,13 @@
           gap: 25px;
           color: white;
           font-size: 1.6rem;
+          & > .li {
+            line-height: 26px;
+          }
+
+          & > .address-title {
+            line-height: 25px;
+          }
         }
       }
     }
