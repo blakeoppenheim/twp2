@@ -6,7 +6,11 @@ function Details({ data }) {
   return (
     <section className="details-container">
       <div className="details-wrapper">
-        <div className="details-info">
+        <div
+          data-aos-duration="1000"
+          data-aos="fade-down-right"
+          className="details-info"
+        >
           <h1 className="details-title">
             {title}
             <span className="point">.</span>{" "}
@@ -14,6 +18,8 @@ function Details({ data }) {
           <p className="details-description">{description}</p>
         </div>
         <div
+          data-aos-duration="1000"
+          data-aos="zoom-in-down"
           className={
             hasBackgroundIcon
               ? "details-image__container"
