@@ -1,3 +1,4 @@
+@forward "./../../assets/style/index.scss";
 @keyframes show {
   from {
     opacity: 0.5;
@@ -13,18 +14,46 @@
   width: 100%;
   padding-inline: 40px;
   background-color: #002445;
+  padding-block: 38px;
 
   & > .nav-list {
     display: flex;
     align-items: center;
     gap: 40px;
-    padding-block: 38px;
     font-size: 2rem;
     font-weight: 300;
     color: #ffffff;
     cursor: pointer;
+    position: relative;
+
+    @media (max-width: 1350px) {
+      gap: 25px;
+      font-size: 1.7rem;
+    }
+    @media (max-width: 1150px) {
+      gap: 18px;
+      font-size: 1.6rem;
+    }
+    @media (max-width: 991px) {
+      position: fixed;
+      flex-direction: column;
+      align-items: flex-end;
+      background-color: #e8f0ff;
+      height: 100vh;
+      padding: 75px 25px;
+      z-index: 999;
+      left: 0%;
+      right: 0%;
+      bottom: 0%;
+      gap: 30px;
+    }
+
     & > .list-item {
       color: white;
+      @media (max-width: 991px) {
+        color: #002445;
+        font-weight: 800;
+      }
       & > .link {
         all: unset;
         opacity: 0.5;
@@ -35,12 +64,20 @@
       }
     }
   }
+  & > .nav-list__hide {
+    display: none !important;
+  }
 
   & > .nav-button {
     font-size: 2rem;
-    width: 194px;
+    width: 154px;
     height: 54px;
     border-radius: 42px !important;
     font-weight: 300;
+    margin-left: 40px;
+    @media (max-width: 1350px) {
+      gap: 25px;
+      font-size: 1.7rem;
+    }
   }
 }
