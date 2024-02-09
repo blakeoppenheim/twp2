@@ -1,14 +1,16 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Logo from "../../components/ui/Logo";
 import Button from "./../../components/ui/Button";
 import { NAV_BAR } from "../../constants/navbar";
 import { Link } from "react-router-dom";
 import { PATHS } from "../../constants/paths";
 import BurgerMenu from "../ui/BurgerMenu";
+import useWindowDimensions from "../../hooks/UseWindowDimention";
 
 function NavBar({ style }) {
   const [activeItem, setActiveItem] = useState(1);
   const [openBurgerMenu, setOpenBurgerMenu] = useState(false);
+  const { width } = useWindowDimensions();
 
   const handleOpenBurgerMenu = () => {
     setOpenBurgerMenu((prev) => !prev);
@@ -18,18 +20,25 @@ function NavBar({ style }) {
     setActiveItem((prev) => index);
   };
 
-  console.log("prev|,", openBurgerMenu);
+  useEffect(() => {
+    if (width >= 991) {
+      setOpenBurgerMenu(true);
+    }
+  }, [width]);
 
   return (
     <nav className="nav-container">
-      <Logo />(
+      <Logo />
       <ul className={openBurgerMenu ? " nav-list" : "nav-list__hide nav-list"}>
-        <li onClick={handleOpenBurgerMenu}>*</li>
+        <li></li>
         {NAV_BAR.map((item) => (
           <>
             <li key={item.id} className="list-item">
               <Link
-                onClick={() => handleActiveItem(item.id)}
+                onClick={() => {
+                  handleActiveItem(item.id);
+                  handleOpenBurgerMenu();
+                }}
                 className={
                   item.id === activeItem ? "link link-active " : "link"
                 }
@@ -41,9 +50,12 @@ function NavBar({ style }) {
           </>
         ))}
       </ul>
-      )
+
       <Button className="nav-button" text="Get a Quote" />
-      <BurgerMenu showMenu={handleOpenBurgerMenu} />
+      <BurgerMenu
+        openBurgerMenu={openBurgerMenu}
+        handleOpenBurgerMenu={handleOpenBurgerMenu}
+      />
     </nav>
   );
 }

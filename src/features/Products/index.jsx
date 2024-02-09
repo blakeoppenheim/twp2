@@ -5,7 +5,6 @@ import {
   aluminumBottle,
 } from "./../../constants/products";
 import Button from "./../../components/ui/Button";
-import Icon from "./../../assets/icons/aliminumBottle.svg";
 import waterIcon from "./../../assets/icons/water.svg";
 import recycleIcon from "./../../assets/icons/recycle.svg";
 import handIcon from "./../../assets/icons/hand.svg";
@@ -15,6 +14,7 @@ import plasticIconWhite from "./../../assets/icons/plastic.svg";
 import plasticIconBlue from "./../../assets/icons/bottleBlue.svg";
 import glassIconBlue from "./../../assets/icons/glass.svg";
 import glassIconWhite from "./../../assets/icons/glassWhite.svg";
+
 function Products() {
   const [selectedProduct, setSelectedProduct] = useState(aluminumBottle);
   return (

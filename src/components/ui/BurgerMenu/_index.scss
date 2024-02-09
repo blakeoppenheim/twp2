@@ -10,9 +10,22 @@ input[type="checkbox"] {
   cursor: pointer;
   width: 50px;
   height: 40px;
+  margin-left: 40px;
+  z-index: 999;
+  scale: 0.7;
+
+  @media (min-width: 992px) {
+    display: none;
+    margin-left: 0px;
+  }
+  @media (max-width: 450px) {
+    margin-left: 12px;
+  }
 }
 
-.bar span {
+.top,
+.middle,
+.bottom {
   position: absolute;
   width: 45px;
   height: 7px;
@@ -21,6 +34,12 @@ input[type="checkbox"] {
   display: inline-block;
   transition: 0.3s ease;
   left: 0;
+}
+
+.top-burger__item,
+.middle-burger__item,
+.bottom-burger__item {
+  background: #012547 !important;
 }
 
 .bar span.top {
@@ -35,22 +54,22 @@ input[type="checkbox"] {
   bottom: 0;
 }
 
-input[type]:checked ~ span.top {
+.top-burger__item {
   transform: rotate(45deg);
   transform-origin: top left;
   width: 48px;
   left: 5px;
 }
 
-input[type]:checked ~ span.bottom {
+.bottom-burger__item {
   transform: rotate(-45deg);
   transform-origin: top left;
   width: 48px;
-  bottom: -1px;
-  box-shadow: 0 0 10px #495057;
+  bottom: -1px !important;
+  //   box-shadow: 0 0 10px #495057;
 }
 
-input[type]:checked ~ span.middle {
+.middle-burger__item {
   transform: translateX(-20px);
   opacity: 0;
 }

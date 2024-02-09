@@ -15,6 +15,9 @@
   padding-inline: 40px;
   background-color: #002445;
   padding-block: 38px;
+  @media (max-width: 1350px) {
+    padding-inline: 25px;
+  }
 
   & > .nav-list {
     display: flex;
@@ -45,7 +48,7 @@
       left: 0%;
       right: 0%;
       bottom: 0%;
-      gap: 30px;
+      gap: 32px;
     }
 
     & > .list-item {
@@ -78,6 +81,14 @@
     @media (max-width: 1350px) {
       gap: 25px;
       font-size: 1.7rem;
+    }
+    @media (max-width: 450px) {
+      width: 115px;
+      height: 33px;
+      font-size: 1.4rem;
+      padding-inline: 10px;
+      text-wrap: nowrap;
+       margin-left: 15px;
     }
   }
 }
