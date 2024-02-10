@@ -12,6 +12,21 @@
     bottom: -35%;
   }
 }
+@keyframes bottomAllBottleMobile {
+  0% {
+    bottom: -40%;
+  }
+  50% {
+    bottom: -25px;
+  }
+  65% {
+    bottom: -25px;
+  }
+  100% {
+    bottom: -40%;
+  }
+}
+
 @keyframes bottomBottle {
   0% {
     top: 0%;
@@ -21,6 +36,20 @@
   }
   65% {
     top: 12%;
+  }
+  100% {
+    top: 0%;
+  }
+}
+@keyframes bottomBottleMobile {
+  0% {
+    top: 0%;
+  }
+  50% {
+    top: 18%;
+  }
+  65% {
+    top: 18%;
   }
   100% {
     top: 0%;
@@ -37,6 +66,10 @@
   height: calc(100vh - 100.5px);
   position: relative;
   overflow: hidden;
+  
+  @media (max-width: 991px) {
+    height: 100vh;
+  }
 
   & > .bottle-icon {
     position: absolute;
@@ -44,15 +77,23 @@
     transform: translateX(-50%);
     bottom: -35%;
     animation: bottomAllBottle 2.8s ease-in-out;
-    z-index: 1;
+    z-index: 2;
+    @media (max-width: 991px) {
+      bottom: -40%;
+      animation: bottomAllBottleMobile 2.8s ease-in-out;
+    }
   }
   & > .bottle-head {
     position: absolute;
     left: 50%;
     top: 0%;
     animation-delay: 1s;
+    width: 155px;
     animation: bottomBottle 2.8s ease-in-out;
     transform: translateX(-50%);
-    z-index: 3;
+
+    @media (max-width: 991px) {
+      animation: bottomBottleMobile 2.8s ease-in-out;
+    }
   }
 }

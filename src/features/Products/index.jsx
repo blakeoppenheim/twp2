@@ -5,20 +5,20 @@ import {
   aluminumBottle,
 } from "./../../constants/products";
 import Button from "./../../components/ui/Button";
-import waterIcon from "./../../assets/icons/water.svg";
-import recycleIcon from "./../../assets/icons/recycle.svg";
-import handIcon from "./../../assets/icons/hand.svg";
 import aluminumIconBlue from "./../../assets/icons/aliminum.svg";
 import aluminumIconWhite from "./../../assets/icons/alimnumWhite.svg";
 import plasticIconWhite from "./../../assets/icons/plastic.svg";
 import plasticIconBlue from "./../../assets/icons/bottleBlue.svg";
 import glassIconBlue from "./../../assets/icons/glass.svg";
 import glassIconWhite from "./../../assets/icons/glassWhite.svg";
+import useWindowDimensions from "../../hooks/UseWindowDimention";
+import Benefits from "../../components/Benefits";
 
 function Products() {
   const [selectedProduct, setSelectedProduct] = useState(aluminumBottle);
+  const { width } = useWindowDimensions();
   return (
-    <section className="products-container">
+    <section id="products" className="products-container">
       <article className="products-container__header">
         <div data-aos="fade-right" className="product-image__container">
           <img
@@ -76,34 +76,7 @@ function Products() {
           </div>
         </div>
       </article>
-      <article  className="products-container__footer">
-        <ul className="list">
-          <li>
-            <img
-              src={handIcon}
-              alt="sustainable-icon"
-              className="sustainable-icon"
-            />
-          </li>
-          <li>sustainable</li>
-        </ul>
-        <ul className="list">
-          <li>
-            <img src={waterIcon} alt="water-icon" className="water-icon" />
-          </li>
-          <li>lightweight</li>
-        </ul>
-        <ul className="list">
-          <li>
-            <img
-              src={recycleIcon}
-              alt="water-icon"
-              className="recyclable-icon"
-            />
-          </li>
-          <li>always recyclable</li>
-        </ul>
-      </article>
+      {width > 991 && <Benefits />}
     </section>
   );
 }

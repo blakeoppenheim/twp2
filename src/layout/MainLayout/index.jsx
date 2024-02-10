@@ -5,7 +5,7 @@ import Footer from "./../../components/Footer";
 function MainLayout({ children }) {
   return (
     <>
-      <NavBar />
+      <NavBar  />
       <main>{children}</main>
       <Footer />
     </>

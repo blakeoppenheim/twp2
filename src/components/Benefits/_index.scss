@@ -1,0 +1,32 @@
+.products-container__footer {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 110px;
+  margin-top: 50px;
+  @media (max-width: 991px) {
+    scale: 0.8;
+    gap: 80px;
+  }
+  @media (max-width: 567px) {
+    scale: 0.6;
+    gap: 50px;
+  }
+  @media (max-width: 310px) {
+    scale: 0.6;
+    gap: 20px;
+  }
+  & > .list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    color: #002445;
+    font-size: 2.1rem;
+    font-weight: 500;
+
+    & > li {
+      text-align: center;
+    }
+  }
+}

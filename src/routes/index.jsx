@@ -3,11 +3,6 @@ import { Routes, Route } from "react-router-dom";
 import LoadingScreen from "../components/ui/Loader";
 import home from "./home";
 import contact from "./Contact";
-import products from "./products";
-import about from "./about";
-import ourWork from "./ourWork";
-import ourSource from "./ourSource";
-import ourStory from "./ourStory";
 
 export const renderRoutes = (routes) => {
   return (
@@ -34,14 +29,6 @@ export const renderRoutes = (routes) => {
   );
 };
 
-const routes = [
-  ...home,
-  ...about,
-  ...contact,
-  ...products,
-  ...ourSource,
-  ...ourStory,
-  ...ourWork,
-];
+const routes = [...home, ...contact];
 
 export default routes;

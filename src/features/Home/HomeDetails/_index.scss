@@ -50,6 +50,9 @@
   transform: translateX(-50%);
   animation: bottomDetails 3.8s ease-in-out;
   width: 100%;
+  @media (max-width: 459px) {
+    gap: 10px;
+  }
 
   & > .title {
     font-weight: 600;
@@ -60,6 +63,17 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
     animation: buttonScale 3s ease-in-out;
+
+    @media (max-width: 767px) {
+      font-size: 5rem;
+      padding-inline: 10px;
+    }
+    @media (max-width: 459px) {
+      font-size: 4rem;
+    }
+    @media (max-width: 365px) {
+      font-size: 3.3rem;
+    }
   }
 
   & > .description {
@@ -71,6 +85,13 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
     animation: buttonScale 3s ease-in-out;
+    @media (max-width: 459px) {
+      font-size: 1.6rem;
+      padding-inline: 10px;
+    }
+    @media (max-width: 365px) {
+      font-size: 1.4rem;
+    }
   }
   & > .home-details__btn {
     font-weight: 300;

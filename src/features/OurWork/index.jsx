@@ -19,7 +19,7 @@ function OurWork() {
 
   return (
     <>
-      <div className="navigation-wrapper">
+      <div id="ourWork" className="navigation-wrapper">
         <div ref={sliderRef} className="keen-slider">
           {OUR_WORK.map((item) => (
             <OurWorkWrapper

@@ -1,10 +1,20 @@
 import React from "react";
+import useWindowDimensions from "../../hooks/UseWindowDimention";
+import Benefits from "../Benefits";
 
 function Details({ data }) {
-  const { title, description, icon, hasBackgroundIcon } = data;
+  const { width } = useWindowDimensions();
+  const {
+    title,
+    description,
+    icon,
+    hasBackgroundIcon,
+    id,
+    hasBottomBenefitsIcons,
+  } = data;
 
   return (
-    <section className="details-container">
+    <section id={id} className="details-container">
       <div className="details-wrapper">
         <div
           data-aos-duration="1000"
@@ -29,6 +39,8 @@ function Details({ data }) {
           <img className="detail-image" src={icon} alt="detail-icon" />
         </div>
       </div>
+
+      {hasBottomBenefitsIcons && width < 991 && <Benefits />}
     </section>
   );
 }
