@@ -19,6 +19,7 @@
   background-color: #e8f1fe;
   @media (max-width: 991px) {
     height: fit-content;
+    padding-inline: 10px;
   }
   & > .products-container__header {
     display: flex;
@@ -28,15 +29,24 @@
     @media (max-width: 991px) {
       flex-direction: column-reverse;
       padding-inline: 10px;
+      gap: 30px;
     }
     & > .product-image__container {
       width: 50%;
       position: relative;
       display: flex;
       align-items: center;
+      @media (max-width: 991px) {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
       & > .bottle-image {
         width: 265px;
         height: 550px;
+        @media (max-width: 991px) {
+          height: 340px;
+        }
       }
       & > .image-description {
         align-self: flex-end;
@@ -81,6 +91,15 @@
         font-weight: bold;
         font-size: 1.8rem;
         text-transform: uppercase;
+
+        @media (max-width: 991px) {
+          font-size: 1.3rem;
+        }
+        @media (max-width: 350px) {
+          width: 100%;
+          text-align: center;
+          padding-inline: 30px;
+        }
       }
 
       & > .product-title {
@@ -89,14 +108,52 @@
         color: #002445;
         text-transform: uppercase;
         text-align: right;
+        position: relative;
+        &::before {
+          position: absolute;
+          content: "";
+          right: 0px;
+          bottom: -7px;
+          height: 3.5px;
+          background-color: #002445;
+          width: 55%;
+          height: 2px;
+          @media (max-width: 991px) {
+            bottom: -10px;
+          }
+          @media (max-width: 350px) {
+            display: none;
+          }
+        }
+        @media (max-width: 991px) {
+          font-size: 3.7rem;
+        }
+        @media (max-width: 450px) {
+          width: 100%;
+        }
+        @media (max-width: 350px) {
+          text-align: center;
+          padding-inline: 30px;
+        }
 
         & > .title {
           color: #2e75a9;
           text-align: right;
+          position: relative;
+          @media (max-width: 450px) {
+            width: 100%;
+          }
+          @media (max-width: 350px) {
+            text-align: center;
+            padding-inline: 30px;
+          }
         }
 
         & > .point {
           color: #2e75a9;
+          @media (max-width: 350px) {
+            display: none;
+          }
         }
       }
 
@@ -112,6 +169,18 @@
         -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;
         overflow: hidden;
+        @media (max-width: 991px) {
+          font-size: 1.3rem;
+          line-height: 20px;
+        }
+        @media (max-width: 450px) {
+          width: 100%;
+          padding-right: 10px;
+        }
+        @media (max-width: 350px) {
+          text-align: center;
+          padding-inline: 30px;
+        }
 
         &::before {
           position: absolute;
@@ -127,6 +196,10 @@
           color: #2e75a9;
           font-weight: bold;
           padding-inline: 5px;
+          position: relative;
+          @media (max-width: 350px) {
+            text-align: start;
+          }
         }
       }
 
@@ -137,6 +210,15 @@
         gap: 10px;
         margin-top: 40px;
         width: 100%;
+        @media (max-width: 991px) {
+          display: flex;
+          margin-top: 25px;
+          justify-content: space-evenly;
+        }
+        @media (max-width: 350px) {
+          flex-direction: column;
+        }
+
         & > button {
           all: unset;
           height: 44px;
@@ -151,6 +233,14 @@
           font-size: 1.5rem;
           color: white;
           font-weight: 500;
+          @media (max-width: 991px) {
+            font-size: 1.2rem;
+            padding-inline: 8px;
+          }
+          @media (max-width: 350px) {
+            width: 90vw;
+            padding-block: 10px;
+          }
         }
 
         & > .active {
