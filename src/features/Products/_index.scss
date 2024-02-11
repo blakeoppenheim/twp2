@@ -47,6 +47,10 @@
         @media (max-width: 991px) {
           height: 340px;
         }
+        @media (max-width: 350px) {
+          width: 200px;
+          height: 300px;
+        }
       }
       & > .image-description {
         align-self: flex-end;
@@ -76,6 +80,10 @@
           top: -25px;
           border-radius: 50%;
           background-color: #000d7f;
+        }
+        @media (max-width: 350px) {
+          font-size: 1rem;
+          padding-right: 5px;
         }
       }
     }

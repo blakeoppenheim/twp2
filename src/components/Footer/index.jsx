@@ -6,8 +6,10 @@ import twitterIcon from "./../../assets/icons/TwitterIcon.svg";
 import phoneIcon from "./../../assets/icons/phone.svg";
 import emailIcon from "./../../assets/icons/email.svg";
 import location from "./../../assets/icons/location.svg";
+import useWindowDimensions from "../../hooks/UseWindowDimention";
 
 function Footer() {
+  const { width } = useWindowDimensions();
   return (
     <footer className="footer-container">
       <div className="footer-top__section">
@@ -50,8 +52,16 @@ function Footer() {
             </li>
             <li>
               <img src={location} alt="phone-icon" />
-              132 Dartmouth Street Boston,
-              <br /> Massachusetts 02156 United States
+              {width > 991 ? (
+                <>
+                  132 Dartmouth Street Boston,
+                  <br /> Massachusetts 02156 United States{" "}
+                </>
+              ) : (
+                <>
+                  123 Street <br /> Place, State 12345b <br /> United States
+                </>
+              )}
             </li>
           </ul>
           <ul className="info-list">

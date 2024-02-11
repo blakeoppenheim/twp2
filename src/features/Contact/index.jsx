@@ -3,17 +3,29 @@ import Button from "../../components/ui/Button";
 import phoneIcon from "./../../assets/icons/phone.svg";
 import emailIcon from "./../../assets/icons/email.svg";
 import location from "./../../assets/icons/location.svg";
+import useWindowDimensions from "../../hooks/UseWindowDimention";
 
 function Contact() {
+  const { width } = useWindowDimensions();
   return (
     <section className="contact-page__container">
-      <h1
-        data-aos-duration="1000"
+      <article className="contact-title">
+        <h1
+          data-aos-duration="1000"
+          data-aos="fade-down"
+          className="contact-title"
+        >
+          Contact Us
+        </h1>
+      </article>
+      <p
+        data-aos-duration="900"
         data-aos="fade-down"
-        className="contact-title"
+        className="contact-description"
       >
-        Contact Us
-      </h1>
+        Any question or remarks? {width < 991 && <br />}
+        Just write us a message!
+      </p>
       <article
         data-aos-duration="1500"
         data-aos="flip-left"

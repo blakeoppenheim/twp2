@@ -36,9 +36,10 @@
   width: 100%;
   padding-inline: 40px;
   background-color: #002445;
-  padding-block: 38px;
+  padding-block: 25px;
   @media (max-width: 1350px) {
     padding-inline: 25px;
+    padding-block: 20px;
   }
   @media (max-width: 991px) {
     padding-block: 20px;
@@ -74,7 +75,8 @@
       bottom: 0%;
       gap: 32px;
       width: 250px;
-      border-radius: 14px;
+      border-top-left-radius: 14px;
+      border-bottom-left-radius: 14px;
       animation: slideIn 0.4s ease-out;
     }
     @media (max-width: 330px) {
