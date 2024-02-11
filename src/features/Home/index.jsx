@@ -6,7 +6,7 @@ import HomeDetails from "./HomeDetails";
 
 function Home() {
   return (
-    <section className="header-section">
+    <section id="home" className="header-section">
       <HomeDetails />
       <img className="bottle-head" src={BottleHead} alt="bottle-head" />
       <img className="bottle-icon" src={OpenedBottle} alt="bottle-icon" />

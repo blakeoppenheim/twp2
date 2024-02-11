@@ -39,8 +39,30 @@ function NavBar({ style }) {
     }
   }, [openBurgerMenu, width]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      for (const item of NAV_BAR) {
+        const element = document.getElementById(item.ref);
+
+        if (element) {
+          const elementTop = element.offsetTop - 200;
+          const elementBottom = elementTop + element.offsetHeight;
+          if (scrollPosition >= elementTop && scrollPosition < elementBottom) {
+            setActiveItem(item.id);
+            break;
+          }
+        }
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <nav id="home" className="nav-container">
+    <nav className="nav-container">
       <Logo />
       <ul className={openBurgerMenu ? " nav-list" : "nav-list__hide nav-list"}>
         <li></li>
