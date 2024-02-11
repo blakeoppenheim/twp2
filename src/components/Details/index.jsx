@@ -14,14 +14,14 @@ function Details({ data }) {
   } = data;
 
   return (
-    <section id={id} className="details-container">
+    <section className="details-container">
       <div className="details-wrapper">
         <div
           data-aos-duration="1000"
           data-aos="fade-down-right"
           className="details-info"
         >
-          <h1 className="details-title">
+          <h1 id={id} className="details-title">
             {title}
             <span className="point">.</span>{" "}
           </h1>

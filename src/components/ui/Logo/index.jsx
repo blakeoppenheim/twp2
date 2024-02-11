@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import { Link } from "react-router-dom";
 
 function Logo() {
   return (
-    <span className='main-logo'>twp</span>
-  )
+    <Link to="/twp/home" className="main-logo">
+      twp
+    </Link>
+  );
 }
 
-export default Logo
+export default Logo;

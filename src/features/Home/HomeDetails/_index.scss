@@ -20,6 +20,28 @@
     overflow: hidden;
   }
 }
+@keyframes bottomMobileDetails {
+  0% {
+    top: 24.5%;
+    opacity: 1;
+    overflow: hidden;
+  }
+  20% {
+    top: 29%;
+    opacity: 0;
+    overflow: hidden;
+  }
+  60% {
+    top: 29%;
+    opacity: 0;
+    overflow: hidden;
+  }
+  100% {
+    top: 24.5%;
+    opacity: 1;
+    overflow: hidden;
+  }
+}
 
 @keyframes buttonScale {
   0% {
@@ -50,8 +72,18 @@
   transform: translateX(-50%);
   animation: bottomDetails 3.8s ease-in-out;
   width: 100%;
-  @media (max-width: 459px) {
+
+  @media (max-width: 991px) {
+    top: 24.5%;
+    animation: bottomMobileDetails 3.8s ease-in-out;
+  }
+
+  @media (max-width: 550px) {
     gap: 10px;
+    top: 24.5%;
+    left: 40%;
+    scale: 0.8;
+    animation: bottomMobileDetails 3.8s ease-in-out;
   }
 
   & > .title {

@@ -1,6 +1,6 @@
 @keyframes bottomAllBottle {
   0% {
-    bottom: -35%;
+    bottom: -320px;
   }
   50% {
     bottom: -25px;
@@ -9,12 +9,12 @@
     bottom: -25px;
   }
   100% {
-    bottom: -35%;
+    bottom: -320px;
   }
 }
 @keyframes bottomAllBottleMobile {
   0% {
-    bottom: -40%;
+    bottom: -160px;
   }
   50% {
     bottom: -25px;
@@ -23,7 +23,21 @@
     bottom: -25px;
   }
   100% {
-    bottom: -40%;
+    bottom: -160px;
+  }
+}
+@keyframes bottomAllBottleSmallMobile {
+  0% {
+    bottom: -45%;
+  }
+  50% {
+    bottom: -30%;
+  }
+  65% {
+    bottom: -30%;
+  }
+  100% {
+    bottom: -45%;
   }
 }
 
@@ -43,16 +57,30 @@
 }
 @keyframes bottomBottleMobile {
   0% {
-    top: 0%;
+    top: 15%;
   }
   50% {
-    top: 18%;
+    top: 50%;
   }
   65% {
-    top: 18%;
+    top: 50%;
   }
   100% {
-    top: 0%;
+    top: 15%;
+  }
+}
+@keyframes bottomBottleSmallMobile {
+  0% {
+    top: 15%;
+  }
+  50% {
+    top: 55%;
+  }
+  65% {
+    top: 55%;
+  }
+  100% {
+    top: 15%;
   }
 }
 
@@ -66,7 +94,7 @@
   height: calc(100vh - 100.5px);
   position: relative;
   overflow: hidden;
-  
+
   @media (max-width: 991px) {
     height: 100vh;
   }
@@ -75,12 +103,21 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: -35%;
+    bottom: -320px;
     animation: bottomAllBottle 2.8s ease-in-out;
     z-index: 2;
     @media (max-width: 991px) {
       bottom: -40%;
+      width: 165px;
+      bottom: -160px;
       animation: bottomAllBottleMobile 2.8s ease-in-out;
+    }
+    @media (max-width: 550px) {
+      bottom: -45%;
+      animation: bottomAllBottleSmallMobile 2.8s ease-in-out;
+      width: 190px;
+      left: 50%;
+      transform: translateX(-50%);
     }
   }
   & > .bottle-head {
@@ -93,7 +130,15 @@
     transform: translateX(-50%);
 
     @media (max-width: 991px) {
+      top: 15%;
+      width: 94px;
       animation: bottomBottleMobile 2.8s ease-in-out;
+    }
+    @media (max-width: 550px) {
+      top: 15%;
+      width: 105px;
+      left: 50%;
+      animation: bottomBottleSmallMobile 2.8s ease-in-out;
     }
   }
 }

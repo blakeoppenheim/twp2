@@ -13,13 +13,15 @@ input[type="checkbox"] {
   margin-left: 40px;
   z-index: 999;
   scale: 0.7;
-
+  position: fixed;
+  right: 30px;
   @media (min-width: 992px) {
     display: none;
     margin-left: 0px;
   }
   @media (max-width: 450px) {
     margin-left: 12px;
+    right: 10px;
   }
 }
 

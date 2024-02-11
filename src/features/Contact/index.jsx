@@ -1,9 +1,10 @@
 import React from "react";
+import useWindowDimensions from "../../hooks/UseWindowDimention";
 import Button from "../../components/ui/Button";
 import phoneIcon from "./../../assets/icons/phone.svg";
 import emailIcon from "./../../assets/icons/email.svg";
 import location from "./../../assets/icons/location.svg";
-import useWindowDimensions from "../../hooks/UseWindowDimention";
+import letterSendIcon from "./../../assets/icons/letterSend.svg";
 
 function Contact() {
   const { width } = useWindowDimensions();
@@ -108,6 +109,11 @@ function Contact() {
             />
           </div>
           <Button className="submit-button" text={"Send Message"} />
+          <img
+            src={letterSendIcon}
+            alt="letter-send"
+            className="letter-send__icon"
+          />
         </form>
       </article>
     </section>

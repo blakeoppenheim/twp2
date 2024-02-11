@@ -9,7 +9,6 @@ export const renderRoutes = (routes) => {
     <Suspense fallback={<LoadingScreen />}>
       <Routes>
         {routes.map((route, index) => {
-          console.log("route.path", route.path);
           const Component = route.component;
           const Layout = route.layout || Fragment;
           return (

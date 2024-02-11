@@ -37,12 +37,16 @@
   padding-inline: 40px;
   background-color: #002445;
   padding-block: 25px;
+
   @media (max-width: 1350px) {
     padding-inline: 25px;
     padding-block: 20px;
   }
   @media (max-width: 991px) {
     padding-block: 20px;
+    position: fixed;
+    top: 0;
+    z-index: 3;
   }
 
   & > .nav-list {
@@ -78,6 +82,7 @@
       border-top-left-radius: 14px;
       border-bottom-left-radius: 14px;
       animation: slideIn 0.4s ease-out;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     }
     @media (max-width: 330px) {
       width: 200px;
@@ -110,6 +115,9 @@
     border-radius: 42px !important;
     font-weight: 300;
     margin-left: 40px;
+    @media (max-width: 991px) {
+      margin-right: 100px;
+    }
     @media (max-width: 1350px) {
       gap: 25px;
       font-size: 1.7rem;
@@ -121,6 +129,10 @@
       padding-inline: 10px;
       text-wrap: nowrap;
       margin-left: 15px;
+      margin-right: 50px;
+    }
+    @media (max-width: 300px) {
+      margin-right: 70px;
     }
   }
 }

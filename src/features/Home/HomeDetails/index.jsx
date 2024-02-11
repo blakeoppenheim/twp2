@@ -4,12 +4,7 @@ import EditIcon from "./../../../assets/icons/edit.svg";
 
 function HomeDetails() {
   return (
-    <section
-    //   data-aos-delay="700"
-    //   data-aos-duration="1000"
-    //   data-aos="zoom-in"
-      className="home-details__container"
-    >
+    <section className="home-details__container">
       <h1 className="title">
         We’re <br /> The Water People
       </h1>

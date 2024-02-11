@@ -33,6 +33,12 @@ function NavBar({ style }) {
     }
   }, [width]);
 
+  useEffect(() => {
+    if (width < 991) {
+      document.body.style.overflow = "hidden";
+    }
+  }, [openBurgerMenu, width]);
+
   return (
     <nav id="home" className="nav-container">
       <Logo />
