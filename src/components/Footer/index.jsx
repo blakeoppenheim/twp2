@@ -1,17 +1,21 @@
 import React from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import Button from "../ui/Button";
 import phoneIcon from "./../../assets/icons/phone.svg";
 import emailIcon from "./../../assets/icons/email.svg";
-import { useNavigate } from "react-router-dom";
 
 function Footer() {
   const navigate = useNavigate();
+  const currentPath = useLocation();
+
   const handleScrollToElement = (ref) => {
-    if (ref.path === "/twp/contact-us") return;
-    if (ref)
+    if (currentPath.pathname === "/twp/contact-us") {
+      navigate("/twp/home");
+    } else {
       document.getElementById(ref).scrollIntoView({
         behavior: "smooth",
       });
+    }
   };
   return (
     <footer className="footer-container">
