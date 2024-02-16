@@ -1,41 +1,32 @@
 import React from "react";
 import Button from "../ui/Button";
-import Social from "./../../assets/icons/Social.svg";
-import facebookIcon from "./../../assets/icons/facebookIcon.svg";
-import twitterIcon from "./../../assets/icons/TwitterIcon.svg";
 import phoneIcon from "./../../assets/icons/phone.svg";
 import emailIcon from "./../../assets/icons/email.svg";
-import location from "./../../assets/icons/location.svg";
-import useWindowDimensions from "../../hooks/UseWindowDimention";
+import { useNavigate } from "react-router-dom";
 
 function Footer() {
-  const { width } = useWindowDimensions();
+  const navigate = useNavigate();
+  const handleScrollToElement = (ref) => {
+    if (ref.path === "/twp/contact-us") return;
+    if (ref)
+      document.getElementById(ref).scrollIntoView({
+        behavior: "smooth",
+      });
+  };
   return (
     <footer className="footer-container">
       <div className="footer-top__section">
         <p className="subtitle">Feel Free To Contact Us</p>
         <h2 className="title">
-          +1-WAT-ERP-EOPL <br />
-          tpatnyc@gmail.com
+          917-300-8211 <br />
+          info@thewaterpeople.net
         </h2>
-        <Button text="Get a Quote" className="footer-btn" />
-        <p className="country-title">
-          Weston, CT <br />
-          USA
-        </p>
-        <div className="social-media__section">
-          <img
-            src={facebookIcon}
-            className="facebook-icon"
-            alt="facebook-icon"
-          />
-          <img src={twitterIcon} className="twitter-icon" alt="twitter-icon" />
-          <img
-            src={Social}
-            className="social-media__icon"
-            alt="social-media__icon"
-          />
-        </div>
+        <Button
+          link={"/twp/contact-us"}
+          text="Get a Quote"
+          className="footer-btn"
+        />
+        <p className="country-title"></p>
       </div>
       <div className="footer-bottom__section">
         <h3 className="logo-title">TWP</h3>
@@ -44,42 +35,59 @@ function Footer() {
             <li>Reach us</li>
             <li>
               <img src={phoneIcon} alt="phone-icon" />
-              +1 THE-WTR-PEPL
+              917-300-8211
             </li>
             <li>
               <img src={emailIcon} alt="email-icon" />
-              tpatnyc@gmail.com
-            </li>
-            <li>
-              <img src={location} alt="phone-icon" />
-              {width > 991 ? (
-                <>
-                  132 Dartmouth Street Boston,
-                  <br /> Massachusetts 02156 United States{" "}
-                </>
-              ) : (
-                <>
-                  123 Street <br /> Place, State 12345b <br /> United States
-                </>
-              )}
+              info@thewaterpeople.net
             </li>
           </ul>
           <ul className="info-list">
             <li>Company</li>
-            <li>About</li>
-            <li>Contact</li>
+            <li
+              onClick={() => {
+                handleScrollToElement("about");
+              }}
+            >
+              About
+            </li>
+            <li
+              onClick={() => {
+                navigate("/twp/contact-us");
+              }}
+            >
+              Contact
+            </li>
           </ul>
           <ul className="info-list">
             <li>Quick Links</li>
-            <li>Our Story</li>
-            <li>Our Source</li>
-            <li>Products</li>
+            <li
+              onClick={() => {
+                handleScrollToElement("ourStory");
+              }}
+            >
+              Our Story
+            </li>
+            <li
+              onClick={() => {
+                handleScrollToElement("ourSource");
+              }}
+            >
+              Our Source
+            </li>
+            <li
+              onClick={() => {
+                handleScrollToElement("products");
+              }}
+            >
+              Products
+            </li>
           </ul>
         </div>
       </div>
       <h4 className="copy-right__title">
         <span>&#169;</span>
-        TheWaterPeople. All Rights Reserved.
+        2024 The Water People. All Rights Reserved.
       </h4>
     </footer>
   );

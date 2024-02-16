@@ -28,16 +28,16 @@
 }
 @keyframes bottomAllBottleSmallMobile {
   0% {
-    bottom: -45%;
+    bottom: -60%;
   }
   50% {
-    bottom: -30%;
+    bottom: -25%;
   }
   65% {
-    bottom: -30%;
+    bottom: -25%;
   }
   100% {
-    bottom: -45%;
+    bottom: -60%;
   }
 }
 
@@ -74,10 +74,10 @@
     top: 15%;
   }
   50% {
-    top: 55%;
+    top: 35%;
   }
   65% {
-    top: 55%;
+    top: 35%;
   }
   100% {
     top: 15%;
@@ -91,7 +91,7 @@
     rgba(0, 36, 69, 1) 0%,
     rgba(113, 178, 255, 1) 99%
   );
-  height: calc(100vh - 100.5px);
+  height: calc(100vh + 94px);
   position: relative;
   overflow: hidden;
 
@@ -106,39 +106,34 @@
     bottom: -320px;
     animation: bottomAllBottle 2.8s ease-in-out;
     z-index: 2;
+
     @media (max-width: 991px) {
-      bottom: -40%;
-      width: 165px;
-      bottom: -160px;
-      animation: bottomAllBottleMobile 2.8s ease-in-out;
-    }
-    @media (max-width: 550px) {
-      bottom: -45%;
+      bottom: -60%;
       animation: bottomAllBottleSmallMobile 2.8s ease-in-out;
-      width: 190px;
       left: 50%;
       transform: translateX(-50%);
     }
   }
   & > .bottle-head {
     position: absolute;
+    top: 15%;
     left: 50%;
-    top: 0%;
     animation-delay: 1s;
     width: 155px;
-    animation: bottomBottle 2.8s ease-in-out;
+    animation: bottomBottleSmallMobile 2.8s ease-in-out;
     transform: translateX(-50%);
 
     @media (max-width: 991px) {
       top: 15%;
-      width: 94px;
-      animation: bottomBottleMobile 2.8s ease-in-out;
-    }
-    @media (max-width: 550px) {
-      top: 15%;
-      width: 105px;
       left: 50%;
       animation: bottomBottleSmallMobile 2.8s ease-in-out;
     }
+
+    // @media (max-width: 550px) {
+    //   top: 15%;
+    //   width: 105px;
+    //   left: 50%;
+    //   animation: bottomBottleSmallMobile 2.8s ease-in-out;
+    // }
   }
 }

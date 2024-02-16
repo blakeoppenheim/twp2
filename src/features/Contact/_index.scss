@@ -152,7 +152,7 @@
       & input {
         border-bottom: 1px solid #8d8d8d;
         font-size: 1.2rem;
-        color: #8d8d8d;
+        color: black !important;
         padding-block: 5px;
       }
 
@@ -195,7 +195,7 @@
 
         & .message-field {
           width: 100%;
-
+          color: black !important;
           &::placeholder {
             font-size: 1.5rem;
           }

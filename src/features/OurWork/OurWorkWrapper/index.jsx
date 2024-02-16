@@ -8,7 +8,15 @@ function OurWorkWrapper({ icon, iconName, bgColor, bgIcon }) {
       }}
       className="keen-slider__slide our-work__container"
     >
-      <img className="our-work__image" src={icon} alt={iconName} />
+      <img
+        className={
+          bgColor === "#EBDF01"
+            ? "scaled-work__image our-work__image"
+            : "our-work__image"
+        }
+        src={icon}
+        alt={iconName}
+      />
       {bgIcon && <img src={bgIcon} className="bg-icon" />}
     </div>
   );

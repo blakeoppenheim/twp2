@@ -31,6 +31,9 @@ function NavBar({ style }) {
     if (width >= 991) {
       setOpenBurgerMenu(true);
     }
+    if (width <= 991) {
+      setOpenBurgerMenu(false);
+    }
   }, [width]);
 
   useEffect(() => {
@@ -64,7 +67,7 @@ function NavBar({ style }) {
   return (
     <nav className="nav-container">
       <Logo />
-      <ul className={openBurgerMenu ? " nav-list" : "nav-list__hide nav-list"}>
+      <ul className={openBurgerMenu ? "nav-list" : "nav-list__hide nav-list"}>
         <li></li>
         {NAV_BAR.map((item) => (
           <>
@@ -87,7 +90,11 @@ function NavBar({ style }) {
         ))}
       </ul>
 
-      <Button className="nav-button" text="Get a Quote" />
+      <Button
+        link={"/twp/contact-us"}
+        className="nav-button"
+        text="Get a Quote"
+      />
       <BurgerMenu
         openBurgerMenu={openBurgerMenu}
         handleOpenBurgerMenu={handleOpenBurgerMenu}

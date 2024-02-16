@@ -8,6 +8,11 @@
     contain: cover;
   }
 
+  & > .scaled-work__image {
+    height: calc(100vh - 100px);
+    scale: 1.2;
+  }
+
   .bg-icon {
     position: absolute;
     bottom: 0;

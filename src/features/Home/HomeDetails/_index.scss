@@ -1,21 +1,21 @@
 @keyframes bottomDetails {
   0% {
-    top: 11.5%;
+    top: 31.5%;
     opacity: 1;
     overflow: hidden;
   }
   20% {
-    top: 12%;
+    top: 34.5%;
     opacity: 0;
     overflow: hidden;
   }
   60% {
-    top: 17%;
+    top: 34.5%;
     opacity: 0;
     overflow: hidden;
   }
   100% {
-    top: 11.5%;
+    top: 31.5%;
     opacity: 1;
     overflow: hidden;
   }
@@ -67,7 +67,7 @@
   justify-content: center;
   gap: 20px;
   position: absolute;
-  top: 11.5%;
+  top: 31.5%;
   left: 50%;
   transform: translateX(-50%);
   animation: bottomDetails 3.8s ease-in-out;

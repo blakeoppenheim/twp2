@@ -9,12 +9,13 @@ function HomeDetails() {
         We’re <br /> The Water People
       </h1>
       <p className="description">
-        Discovre elegance with our custom-labeled bottled water , perfect for
+        Discover elegance with our custom-labeled bottled water, perfect for
         adding a personal <br />
         touch to any event or brand. Quality meets style for a truly refreshing
         experince.
       </p>
       <Button
+        link={"/twp/contact-us"}
         text="Get a Quote"
         className="home-details__btn"
         icon={EditIcon}

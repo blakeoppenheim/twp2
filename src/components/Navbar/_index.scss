@@ -21,6 +21,20 @@
     opacity: 1;
   }
 }
+@keyframes slideMinIn {
+  from {
+    right: 0%;
+    bottom: 0%;
+    width: 150px;
+    opacity: 0;
+  }
+  to {
+    right: 0%;
+    bottom: 0%;
+    width: 200px;
+    opacity: 1;
+  }
+}
 @keyframes slideOut {
   from {
     opacity: 0.5;
@@ -30,6 +44,10 @@
   }
 }
 .nav-container {
+  padding-block: 20px;
+  position: fixed;
+  top: 0;
+  z-index: 3;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -72,11 +90,11 @@
       flex-direction: column;
       align-items: flex-end;
       background-color: #e8f0ff;
-      height: 100vh;
+      height: fit-content;
       padding: 75px 25px;
       z-index: 999;
       right: 0%;
-      bottom: 0%;
+      top: 0%;
       gap: 32px;
       width: 250px;
       border-top-left-radius: 14px;
@@ -86,6 +104,7 @@
     }
     @media (max-width: 330px) {
       width: 200px;
+      animation: slideMinIn 0.4s ease-out;
     }
 
     & > .list-item {

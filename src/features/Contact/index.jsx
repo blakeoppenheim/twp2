@@ -39,22 +39,13 @@ function Contact() {
               <li className="phone-icon__container">
                 <img src={phoneIcon} alt="phone-icon" />
               </li>
-              <li className="phone-title">+1-918-402-4971</li>
+              <li className="phone-title">917-300-8211</li>
             </ul>
             <ul>
               <li className="email-icon__container">
                 <img src={emailIcon} alt="email-icon" />
               </li>
-              <li className="email-title">tpatnyc@gmail.com</li>
-            </ul>
-            <ul>
-              <li className="address-icon__container">
-                <img src={location} alt="address-icon" />
-              </li>
-              <li className="address-title">
-                132 Address Street Houston, <br /> Massachusetts 02156 United
-                States
-              </li>
+              <li className="email-title">info@thewaterpeople.net</li>
             </ul>
           </div>
         </div>
@@ -86,18 +77,6 @@ function Contact() {
                 <input name="subject" type="radio" />
                 <label className="inquiry-container">General Inquiry</label>
               </div>
-              <div className="inquiry-container">
-                <input name="subject" type="radio" />
-                <label className="inquiry-container">General Inquiry</label>
-              </div>
-              <div className="inquiry-container">
-                <input name="subject" type="radio" />
-                <label className="inquiry-container">General Inquiry</label>
-              </div>
-              <div className="inquiry-container">
-                <input name="subject" type="radio" />
-                <label className="inquiry-container">General Inquiry</label>
-              </div>
             </div>
           </div>
           <div className="message-container">
@@ -108,7 +87,11 @@ function Contact() {
               type="text"
             />
           </div>
-          <Button className="submit-button" text={"Send Message"} />
+          <Button
+            link={"/twp/home"}
+            className="submit-button"
+            text={"Send Message"}
+          />
           <img
             src={letterSendIcon}
             alt="letter-send"

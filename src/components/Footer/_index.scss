@@ -19,10 +19,11 @@
     justify-content: center;
     padding-block: 40px;
     gap: 25px;
-    @media (max-width: 991px) {
-      background: #e8f0ff;
-      padding-inline: 20px;
-    }
+    background: #e8f0ff;
+    // @media (max-width: 991px) {
+    //   background: #e8f0ff;
+    //   padding-inline: 20px;
+    // }
 
     & > .subtitle {
       font-weight: 600;
@@ -39,6 +40,7 @@
       font-size: 3.2rem;
       line-height: 50px;
       color: #002445;
+      text-align: center;
       @media (max-width: 991px) {
         font-size: 2.1rem;
         margin-top: 0;
@@ -116,6 +118,7 @@
           align-items: flex-start;
           gap: 25px;
           line-height: 25px;
+          cursor: pointer;
           @media (max-width: 991px) {
             flex-direction: column;
             gap: 4px;

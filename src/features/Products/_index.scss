@@ -15,10 +15,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  height: 100vh;
+  height: calc(100vh + 94px);
   background-color: #e8f1fe;
   @media (max-width: 991px) {
     height: fit-content;
+    height: calc(100vh + 94px);
     padding-inline: 10px;
   }
   & > .products-container__header {
@@ -47,7 +48,7 @@
         @media (max-width: 991px) {
           height: 340px;
         }
-        @media (max-width: 350px) {
+        @media (max-width: 500px) {
           width: 200px;
           height: 300px;
         }
@@ -61,6 +62,7 @@
         font-weight: 300;
         text-align: center;
         line-height: 20px;
+        min-width: 221px;
         &::before {
           position: absolute;
           content: "";
@@ -81,9 +83,17 @@
           border-radius: 50%;
           background-color: #000d7f;
         }
-        @media (max-width: 350px) {
-          font-size: 1rem;
+        @media (max-width: 450px) {
+          min-width: min-content;
+        }
+
+        @media (max-width: 390px) {
+          font-size: 1.25rem;
           padding-right: 5px;
+          min-width: min-content;
+        }
+        @media (max-width: 320px) {
+          font-size: 1rem;
         }
       }
     }
@@ -218,6 +228,9 @@
         gap: 10px;
         margin-top: 40px;
         width: 100%;
+        @media (max-width: 1381px) {
+          flex-direction: column;
+        }
         @media (max-width: 991px) {
           display: flex;
           margin-top: 25px;
@@ -230,7 +243,8 @@
         & > button {
           all: unset;
           height: 44px;
-          flex-basis: 28%;
+          min-width: 28%;
+          padding-inline: 22px;
           border-radius: 45px !important;
           background-color: #002445;
           display: flex;
@@ -241,13 +255,20 @@
           font-size: 1.5rem;
           color: white;
           font-weight: 500;
+          @media (max-width: 1381px) {
+            width: 80%;
+            align-self: flex-end;
+          }
           @media (max-width: 991px) {
+            min-width: 28%;
+            max-width: 35%;
             font-size: 1.2rem;
             padding-inline: 8px;
           }
           @media (max-width: 350px) {
-            width: 90vw;
-            padding-block: 10px;
+            min-width: 90vw;
+            max-width: 90vw;
+            align-self: center;
           }
         }
 
