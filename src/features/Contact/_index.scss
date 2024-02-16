@@ -2,10 +2,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
-  height: calc(100vh - 100.5px);
+  justify-content: center;
+  height: calc(100vh + 94px);
   background-color: #e8f1fe;
   padding-inline: 10%;
+  gap: 25px;
   @media (max-width: 991px) {
     height: fit-content;
     justify-content: center;
