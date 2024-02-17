@@ -1,6 +1,8 @@
 import React from "react";
+import useWindowDimensions from "../../../hooks/UseWindowDimention";
 
 function OurWorkWrapper({ icon, iconName, bgColor, bgIcon }) {
+  const { width } = useWindowDimensions();
   return (
     <div
       style={{
@@ -17,7 +19,7 @@ function OurWorkWrapper({ icon, iconName, bgColor, bgIcon }) {
         src={icon}
         alt={iconName}
       />
-      {bgIcon && <img src={bgIcon} className="bg-icon" />}
+      {bgIcon && width > 500 && <img src={bgIcon} className="bg-icon" />}
     </div>
   );
 }

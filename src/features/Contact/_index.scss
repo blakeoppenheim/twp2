@@ -48,7 +48,7 @@
 
     & > .form-information__container {
       flex-basis: 40%;
-      background-color: #002f65;
+      background-color: #002445 !important;
       height: 98%;
       padding: 40px;
       margin: 8px;
@@ -209,7 +209,7 @@
         width: 209px;
         height: 49px;
         color: white;
-        background-color: #002f65;
+        background-color: #002445 !important;
         @media (max-width: 991px) {
           align-self: center;
           width: 100%;

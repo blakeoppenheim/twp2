@@ -4,6 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 
   @media (max-width: 991px) {
     height: fit-content;
@@ -139,5 +140,15 @@
         }
       }
     }
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+    height: 10px;
+    background-color: #002445;
   }
 }
