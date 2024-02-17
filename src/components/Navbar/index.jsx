@@ -5,11 +5,15 @@ import { NAV_BAR } from "../../constants/navbar";
 import { Link, useLocation } from "react-router-dom";
 import BurgerMenu from "../ui/BurgerMenu";
 import useWindowDimensions from "../../hooks/UseWindowDimention";
+import { changeNavStyle } from "../../utils/ChangeNavStyle";
 
-function NavBar({ style }) {
+function NavBar() {
   const [activeItem, setActiveItem] = useState(1);
   const [openBurgerMenu, setOpenBurgerMenu] = useState(false);
+  const { pathname } = useLocation();
   const { width } = useWindowDimensions();
+  const blueNavStyle =
+    changeNavStyle(activeItem) || pathname == "/twp/contact-us";
 
   const handleOpenBurgerMenu = () => {
     if (width < 991) setOpenBurgerMenu((prev) => !prev);
@@ -66,8 +70,16 @@ function NavBar({ style }) {
 
   return (
     <nav className="nav-container">
-      <Logo />
-      <ul className={openBurgerMenu ? "nav-list" : "nav-list__hide nav-list"}>
+      <Logo blueNavStyle={blueNavStyle} />
+      <ul
+        className={
+          !openBurgerMenu
+            ? "nav-list__hide nav-list"
+            : blueNavStyle
+            ? "nav-list nav-list__blue"
+            : " nav-list"
+        }
+      >
         <li></li>
         {NAV_BAR.map((item) => (
           <>
@@ -92,10 +104,11 @@ function NavBar({ style }) {
 
       <Button
         link={"/twp/contact-us"}
-        className="nav-button"
+        className={blueNavStyle ? "nav-button nav-blue__button" : "nav-button"}
         text="Get a Quote"
       />
       <BurgerMenu
+        blueNavStyle={blueNavStyle}
         openBurgerMenu={openBurgerMenu}
         handleOpenBurgerMenu={handleOpenBurgerMenu}
       />

@@ -1,4 +1,4 @@
-import ourStoryIcon from "./../assets/icons/ThreeBottle.svg";
+import ourStoryIcon from "./../assets/icons/ourSourceBottle.svg";
 export const OUR_STORY_DATA = {
   title: "OUR STORY",
   description:
