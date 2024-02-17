@@ -1,23 +1,27 @@
 import React, { useEffect, useState } from "react";
 import { useKeenSlider } from "keen-slider/react";
-import "keen-slider/keen-slider.min.css";
 import OurWorkWrapper from "./OurWorkWrapper";
-import { OUR_WORK } from "../../constants/ourWork";
 import useWindowDimensions from "../../hooks/UseWindowDimention";
+import { OUR_WORK } from "../../constants/ourWork";
+import "keen-slider/keen-slider.min.css";
+import { slider } from "../../utils/autoSlide";
 
 function OurWork() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [loaded, setLoaded] = useState(false);
   const { width } = useWindowDimensions();
-  const [sliderRef, instanceRef] = useKeenSlider({
-    initial: 0,
-    slideChanged(slider) {
-      setCurrentSlide(slider.track.details.rel);
+  const [sliderRef, instanceRef] = useKeenSlider(
+    {
+      initial: 0,
+      slideChanged(slider) {
+        setCurrentSlide(slider.track.details.rel);
+      },
+      created() {
+        setLoaded(true);
+      },
     },
-    created() {
-      setLoaded(true);
-    },
-  });
+    slider(4000)
+  );
 
   return (
     <>
