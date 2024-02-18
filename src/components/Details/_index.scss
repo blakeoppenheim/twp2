@@ -7,7 +7,9 @@
   position: relative;
 
   @media (max-width: 991px) {
+    height: -webkit-fit-content;
     height: fit-content;
+    -webkit-padding-block: 50px 25px;
     padding-block: 50px 25px;
     flex-direction: column;
   }
@@ -20,6 +22,7 @@
 
     @media (max-width: 991px) {
       flex-direction: column;
+      height: -webkit-max-content;
       height: max-content;
       gap: 50px;
       align-items: center;
@@ -102,8 +105,13 @@
       width: 651px;
       position: relative;
       @media (max-width: 991px) {
-        height: fit-content;
         width: 90%;
+        overflow: visible;
+        min-height: 280px;
+        margin-bottom: 80px;
+      }
+      @media (max-width: 567px) {
+        margin-bottom: 30px;
       }
 
       & > .detail-image {
@@ -117,10 +125,24 @@
         transform: translateX(-50%);
         @media (max-width: 991px) {
           position: relative;
-          height: fit-content;
           scale: 1.5;
           left: 55%;
+          bottom: -20px;
+          object-fit: cover;
           transform: translateX(-50%);
+          height: 350px;
+        }
+        @media (max-width: 667px) {
+          position: relative;
+          scale: 1.5;
+          left: 55%;
+          bottom: -40px;
+          object-fit: cover;
+          transform: translateX(-50%);
+          height: 200px;
+        }
+        @media (max-width: 335px) {
+          height: 170px;
         }
       }
     }

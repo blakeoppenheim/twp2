@@ -18,7 +18,7 @@ function Details({ data }) {
       <div className="details-wrapper">
         <div
           data-aos-duration="1000"
-          data-aos="fade-down-right"
+          data-aos="fade-right"
           className="details-info"
         >
           <h1 className="details-title">
@@ -29,7 +29,7 @@ function Details({ data }) {
         </div>
         <div
           data-aos-duration="1000"
-          data-aos="zoom-in-down"
+          data-aos="fade-left"
           className={
             hasBackgroundIcon
               ? "details-image__container"
