@@ -14,7 +14,6 @@ function HomePage() {
   return (
     <>
       <Home />
-      {/* {width < 991 && <Brands />} */}
       <About />
       <OurStory />
       <OurSource />
