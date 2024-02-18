@@ -6,7 +6,7 @@ import { PATHS } from "../../constants/paths";
 export default [
   {
     exact: true,
-    path: PATHS.home,
+    path: "/twp/home",
     component: lazy(
       pageLoader(() =>
         Promise.all([import("../../pages/Home")]).then(
@@ -14,7 +14,20 @@ export default [
         )
       )
     ),
-    
+
+    layout: MainLayout,
+  },
+  {
+    exact: true,
+    path: "",
+    component: lazy(
+      pageLoader(() =>
+        Promise.all([import("../../pages/Home")]).then(
+          ([moduleExports]) => moduleExports
+        )
+      )
+    ),
+
     layout: MainLayout,
   },
 ];
