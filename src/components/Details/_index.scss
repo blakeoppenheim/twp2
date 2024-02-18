@@ -69,19 +69,17 @@
         position: relative;
         line-height: 30px;
         @media (max-width: 991px) {
-          font-size: 1.7rem;
           margin-top: 10px;
           line-height: 25px;
           padding-inline: 20px;
           width: 90%;
-        }
-        @media (max-width: 991px) {
           font-size: 1.4rem;
-          margin-top: 10px;
-          line-height: 25px;
-          padding-inline: 20px;
-          width: 90%;
         }
+        @media (max-width: 355px) {
+          font-size: 1.2rem;
+          line-height: 20px;
+        }
+
         &::after {
           position: absolute;
           content: "";
@@ -112,6 +110,9 @@
       }
       @media (max-width: 567px) {
         margin-bottom: 30px;
+      }
+      @media (max-width: 400px) {
+        margin-bottom: 0px;
       }
 
       & > .detail-image {
