@@ -5,7 +5,7 @@ import react from "@vitejs/plugin-react";
 
 export default {
   // The base URL your application bundle will be deployed at.
-  base: "./", // Change this to your base URL if necessary. For example: '/my-project/'
+  base: "./twp/", // Change this to your base URL if necessary. For example: '/my-project/'
   build: {
     outDir: "dist",
   },
