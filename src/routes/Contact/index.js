@@ -6,7 +6,7 @@ import { PATHS } from "../../constants/paths";
 export default [
   {
     exact: true,
-    path: "/twp/contact-us",
+    path: "twp/contact-us",
     component: lazy(
       pageLoader(() =>
         Promise.all([import("../../pages/Contact")]).then(
