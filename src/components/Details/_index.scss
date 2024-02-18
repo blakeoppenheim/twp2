@@ -110,9 +110,11 @@
       }
       @media (max-width: 567px) {
         margin-bottom: 30px;
+        min-height: 240px;
       }
       @media (max-width: 400px) {
         margin-bottom: 0px;
+        min-height: 220px;
       }
 
       & > .detail-image {
