@@ -1,31 +1,12 @@
 import React, { useRef } from "react";
 import useWindowDimensions from "../../hooks/UseWindowDimention";
 import Button from "../../components/ui/Button";
-import emailjs from "@emailjs/browser";
-// import "./EmailForm.css";
 import phoneIcon from "./../../assets/icons/phone.svg";
 import emailIcon from "./../../assets/icons/email.svg";
 import letterSendIcon from "./../../assets/icons/letterSend.svg";
 
 function Contact() {
   const { width } = useWindowDimensions();
-  const form = useRef();
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-    emailjs
-      .sendForm("service_ID", "template_ID", form.current, "public_key")
-      .then(
-        (result) => {
-          console.log(result.text);
-          console.log("message sent!");
-        },
-        (error) => {
-          console.log(error.text);
-          console.log("error sending message, try again!");
-        }
-      );
-  };
 
   return (
     <section className="contact-page__container">
@@ -68,7 +49,7 @@ function Contact() {
             </ul>
           </div>
         </div>
-        <form ref={form} className="form-container">
+        <form className="form-container">
           <div className="full-name__container">
             <div className="first-name__container">
               <label className="first-name__title">first name</label>
