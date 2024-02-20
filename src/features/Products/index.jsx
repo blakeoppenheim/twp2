@@ -18,17 +18,58 @@ function Products() {
   const [selectedProduct, setSelectedProduct] = useState(aluminumBottle);
   const { width } = useWindowDimensions();
   return (
-    <section id="products" className="products-container">
-      <article className="products-container__header">
-        <div data-aos="fade-right" className="product-image__container">
+    <section
+      id="products"
+      className={
+        selectedProduct.list
+          ? "products-container__plastic products-container"
+          : "products-container"
+      }
+    >
+      <article
+        // data-aos="fade-right"
+        className={
+          selectedProduct.list
+            ? "products-container-plastic__header products-container__header"
+            : "products-container__header"
+        }
+      >
+        <div
+          // data-aos="fade-right"
+          className={
+            selectedProduct.list
+              ? "product-image__container plastic-section__container"
+              : "product-image__container"
+          }
+        >
           <img
             src={selectedProduct.icon}
             className="bottle-image"
             alt="product-image"
           />
-          <p className="image-description">{selectedProduct.iconDescription}</p>
+          <p
+            className={
+              selectedProduct.list
+                ? "plastic-image__description"
+                : "image-description"
+            }
+          >
+            {selectedProduct.iconDescription}
+          </p>
+          {selectedProduct.list && (
+            <div className="list-items">
+              <h4 className="list-title">{selectedProduct.list.title}</h4>
+              <ul className="list-item">
+                {selectedProduct.list.variants &&
+                  selectedProduct.list.variants.map((item) => <li>{item}</li>)}
+              </ul>
+            </div>
+          )}
         </div>
-        <div data-aos="fade-left" className="product-details__container">
+        <div
+          // data-aos="fade-left"
+          className="product-details__container"
+        >
           <h5 className="product-material">{selectedProduct.type}</h5>
           <h1 className="product-title">
             {selectedProduct.title} <br />{" "}

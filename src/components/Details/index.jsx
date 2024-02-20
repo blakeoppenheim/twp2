@@ -14,7 +14,14 @@ function Details({ data }) {
   } = data;
 
   return (
-    <section id={id} className="details-container">
+    <section
+      id={id}
+      className={`${
+        id === "ourStory"
+          ? "details-container large-container"
+          : "details-container"
+      }`}
+    >
       <div className="details-wrapper">
         <div
           data-aos-duration="1000"
@@ -25,7 +32,31 @@ function Details({ data }) {
             {title}
             <span className="point">.</span>{" "}
           </h1>
-          <p className="details-description">{description}</p>
+          <p className="details-description">{description.firstSection}</p>
+          <br />
+          {description.secondSection && (
+            <p className="description">{description.secondSection}</p>
+          )}
+          <br />
+          {description.thirdSection && (
+            <p className="description">{description.thirdSection}</p>
+          )}
+          <br />
+          {description.fourthSection && (
+            <p className="description quote">{description.fourthSection}</p>
+          )}
+          <br />
+          {description.fifthSection && (
+            <p className="description">{description.fifthSection}</p>
+          )}
+          <br />
+          {description.sixSection && (
+            <p className="description">{description.sixSection}</p>
+          )}
+          <br />
+          {description.sevenSection && (
+            <p className="description">{description.sevenSection}</p>
+          )}
         </div>
         <div
           data-aos-duration="1000"

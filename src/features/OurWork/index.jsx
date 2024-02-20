@@ -3,8 +3,8 @@ import { useKeenSlider } from "keen-slider/react";
 import OurWorkWrapper from "./OurWorkWrapper";
 import useWindowDimensions from "../../hooks/UseWindowDimention";
 import { OUR_WORK } from "../../constants/ourWork";
-import "keen-slider/keen-slider.min.css";
 import { slider } from "../../utils/autoSlide";
+import "keen-slider/keen-slider.min.css";
 
 function OurWork() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -13,6 +13,7 @@ function OurWork() {
   const [sliderRef, instanceRef] = useKeenSlider(
     {
       initial: 0,
+      loop: true,
       slideChanged(slider) {
         setCurrentSlide(slider.track.details.rel);
       },

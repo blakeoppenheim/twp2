@@ -77,14 +77,15 @@
     cursor: pointer;
     position: relative;
 
-    @media (max-width: 1350px) {
+    @media (max-width: 1399px) {
       gap: 25px;
-      font-size: 1.7rem;
-    }
-    @media (max-width: 1150px) {
-      gap: 18px;
       font-size: 1.6rem;
     }
+    @media (max-width: 1138px) {
+      gap: 15px;
+      font-size: 1.5rem;
+    }
+
     @media (max-width: 991px) {
       position: fixed;
       flex-direction: column;
@@ -158,6 +159,10 @@
     }
     @media (max-width: 300px) {
       margin-right: 70px;
+    }
+    @media (max-width: 370px) {
+      font-size: 1.2rem;
+      width: 105px;
     }
   }
 

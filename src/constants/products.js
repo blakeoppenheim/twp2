@@ -1,5 +1,5 @@
 import glassBottleIcon from "./../assets/icons/glassBottle.svg";
-import plasticBottleIcon from "./../assets/icons/plasticBottle.svg";
+import plasticBottleIcon from "./../assets/icons/bottlesPlastic.svg";
 import aluminumBottleIcon from "./../assets/icons/aluminumBottle.svg";
 export const glassBottle = {
   id: 1,
@@ -23,6 +23,10 @@ export const plasticBottle = {
   title: "LIGHTWEIGHT",
   description:
     "Crafted from lightweight plastics, this bottle offers a guilt-free way to stay hydrated, blending eco-friendliness with everyday utility.",
+  list: {
+    title: "Offered in",
+    variants: ["8oz", "12oz", "16.9oz", "24oz", "1 liter"],
+  },
 };
 
 export const aluminumBottle = {
