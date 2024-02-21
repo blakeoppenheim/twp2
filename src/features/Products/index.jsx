@@ -27,7 +27,6 @@ function Products() {
       }
     >
       <article
-        // data-aos="fade-right"
         className={
           selectedProduct.list
             ? "products-container-plastic__header products-container__header"
@@ -66,10 +65,7 @@ function Products() {
             </div>
           )}
         </div>
-        <div
-          // data-aos="fade-left"
-          className="product-details__container"
-        >
+        <div className="product-details__container">
           <h5 className="product-material">{selectedProduct.type}</h5>
           <h1 className="product-title">
             {selectedProduct.title} <br />{" "}

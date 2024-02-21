@@ -5,6 +5,10 @@ import useWindowDimensions from "../../hooks/UseWindowDimention";
 import { OUR_WORK } from "../../constants/ourWork";
 import { slider } from "../../utils/autoSlide";
 import "keen-slider/keen-slider.min.css";
+import FourSeasons from "./Sliders/FourSeasons";
+import SoulCycle from "./Sliders/SoulCycle";
+import MercedesSection from "./Sliders/Mercedes";
+import HardRock from "./Sliders/HardRock";
 
 function OurWork() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -12,6 +16,9 @@ function OurWork() {
   const { width } = useWindowDimensions();
   const [sliderRef, instanceRef] = useKeenSlider(
     {
+      defaultAnimation: {
+        duration: 1500,
+      },
       initial: 0,
       loop: true,
       slideChanged(slider) {
@@ -28,13 +35,10 @@ function OurWork() {
     <>
       <div id="ourWork" className="navigation-wrapper">
         <div ref={sliderRef} className="keen-slider">
-          {OUR_WORK.map((item) => (
-            <OurWorkWrapper
-              bgIcon={item.bgIcon ? item.bgIcon : ""}
-              bgColor={item.bgColor}
-              icon={width > 500 ? item.icon : item.iconMobile}
-            />
-          ))}
+          <FourSeasons className="keen-slider__slide" />
+          <SoulCycle className="keen-slider__slide" />
+          <MercedesSection className="keen-slider__slide" />
+          <HardRock className="keen-slider__slide" />
         </div>
       </div>
       {loaded && instanceRef.current && (

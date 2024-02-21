@@ -44,7 +44,7 @@
   }
 }
 .nav-container {
-  padding-block: 20px;
+  padding-block: 22.5px;
   position: fixed;
   top: 0;
   z-index: 3;
@@ -53,8 +53,8 @@
   align-items: center;
   width: 100%;
   padding-inline: 40px;
-  // background-color: #002445;
-  padding-block: 25px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 
   @media (max-width: 1350px) {
     padding-inline: 25px;

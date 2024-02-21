@@ -1,0 +1,60 @@
+.four-seasons__container {
+  height: 103vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media (max-width: 991px) {
+    flex-direction: column;
+    justify-content: center;
+  }
+  & > .black-bg {
+    position: absolute;
+    right: 0%;
+    left: 0%;
+    bottom: 0%;
+    top: 0%;
+    z-index: 1;
+  }
+
+  & > .four-season__bottle {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    width: 530px;
+    @media (max-width: 1200px) {
+      width: 460px;
+    }
+    @media (max-width: 991px) {
+      all: unset;
+      z-index: 3;
+    }
+  }
+
+  & > .title {
+    font-size: 270px;
+    color: white;
+    z-index: 2;
+    line-height: 200px;
+    @media (max-width: 1200px) {
+      font-size: 190px;
+    }
+    @media (max-width: 991px) {
+      line-height: unset;
+      font-size: 100px;
+      text-align: center;
+      line-height: 90px;
+    }
+    @media (max-width: 490px) {
+      font-size: 60px;
+      line-height: 55px;
+    }
+    @media (max-width: 310px) {
+      font-size: 40px;
+      line-height: 45px;
+    }
+  }
+}

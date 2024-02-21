@@ -1,4 +1,8 @@
 @forward "./OurWorkWrapper";
+@forward "./Sliders/FourSeasons/index.scss";
+@forward "./Sliders/HardRock/index.scss";
+@forward "./Sliders/Mercedes/index.scss";
+@forward "./Sliders/SoulCycle/index.scss";
 
 .navigation-wrapper {
   height: 100vh;
@@ -12,7 +16,7 @@
 
 .dots {
   position: absolute;
-  margin-top: -100px;
+  margin-top: -40px;
   left: 50%;
   transform: translateX(-50%);
   & .dot {
