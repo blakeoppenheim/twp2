@@ -3,7 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import Button from "../ui/Button";
 import phoneIcon from "./../../assets/icons/phone.svg";
 import emailIcon from "./../../assets/icons/email.svg";
-import LogoFooter from "./../../assets/icons/logoFooter.svg";
+import LogoFooter from "./../../assets/icons/twpLogoFooter.svg";
 
 function Footer() {
   const navigate = useNavigate();

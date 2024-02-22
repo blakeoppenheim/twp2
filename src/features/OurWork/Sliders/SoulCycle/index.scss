@@ -40,7 +40,7 @@
       scale: 1.5;
     }
     @media (max-width: 400px) {
-      scale: 2;
+      scale: 1.8;
     }
   }
 
@@ -56,6 +56,7 @@
     }
     @media (max-width: 991px) {
       all: unset;
+      height: 60vh;
       z-index: 3;
     }
   }
