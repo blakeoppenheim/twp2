@@ -17,9 +17,7 @@ function Details({ data }) {
     <section
       id={id}
       className={`${
-        id === "ourStory"
-          ? "details-container large-container"
-          : "details-container"
+        id === "ourStory" ? " large-container" : "details-container"
       }`}
     >
       <div className="details-wrapper">

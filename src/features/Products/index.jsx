@@ -17,18 +17,19 @@ import Benefits from "../../components/Benefits";
 function Products() {
   const [selectedProduct, setSelectedProduct] = useState(aluminumBottle);
   const { width } = useWindowDimensions();
+  const isDesktop = width > 991;
   return (
     <section
       id="products"
       className={
-        selectedProduct.list
+        selectedProduct.list && isDesktop
           ? "products-container__plastic products-container"
           : "products-container"
       }
     >
       <article
         className={
-          selectedProduct.list
+          selectedProduct.list && isDesktop
             ? "products-container-plastic__header products-container__header"
             : "products-container__header"
         }
@@ -36,26 +37,43 @@ function Products() {
         <div
           // data-aos="fade-right"
           className={
-            selectedProduct.list
+            selectedProduct.list && isDesktop
               ? "product-image__container plastic-section__container"
               : "product-image__container"
           }
         >
           <img
             src={selectedProduct.icon}
-            className="bottle-image"
+            className={
+              !selectedProduct.list
+                ? "bottle-image"
+                : "bottle-image bottle-image__plastic"
+            }
             alt="product-image"
           />
           <p
             className={
-              selectedProduct.list
+              selectedProduct.list && isDesktop
                 ? "plastic-image__description"
+                : selectedProduct.mobileUIDef
+                ? "plastic-image__mobile"
                 : "image-description"
             }
           >
             {selectedProduct.iconDescription}
+            {selectedProduct.list && !isDesktop && (
+              <div className="list-items">
+                <h4 className="list-title">{selectedProduct.list.title}</h4>
+                <ul className="list-item">
+                  {selectedProduct.list.variants &&
+                    selectedProduct.list.variants.map((item) => (
+                      <li>{item}</li>
+                    ))}
+                </ul>
+              </div>
+            )}
           </p>
-          {selectedProduct.list && (
+          {selectedProduct.list && isDesktop && (
             <div className="list-items">
               <h4 className="list-title">{selectedProduct.list.title}</h4>
               <ul className="list-item">

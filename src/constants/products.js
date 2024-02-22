@@ -1,7 +1,8 @@
 import glassBottleIcon from "./../assets/icons/glassBottle.svg";
 import plasticBottleIcon from "./../assets/icons/bottlesPlastic.svg";
 import aluminumBottleIcon from "./../assets/icons/aluminumBottle.svg";
-export const glassBottle = {
+export const
+  glassBottle = {
   id: 1,
   specialWord: "",
   type: "glass",
@@ -9,6 +10,7 @@ export const glassBottle = {
   iconDescription:
     "Choose our glass bottle for a taste of purity. It's naturally sustainable, chemical-free, and keeps your water refreshingly crisp.",
   title: "PURE",
+  mobileUIDef: false,
   description:
     "Opt for the timeless clarity of glass, providing a toxin-free experience while supporting sustainability with every sip.",
 };
@@ -18,6 +20,7 @@ export const plasticBottle = {
   type: "plastic",
   specialWord: "",
   icon: plasticBottleIcon,
+  mobileUIDef: true,
   iconDescription:
     "Our lightweight plastic bottle is made from recycled materials, combining convenience with environmental responsibility.",
   title: "LIGHTWEIGHT",
@@ -32,6 +35,7 @@ export const plasticBottle = {
 export const aluminumBottle = {
   id: 2,
   type: "aluminum",
+  mobileUIDef: false,
   specialWord: "eco-friendly on-the-go hydration.",
   icon: aluminumBottleIcon,
   iconDescription:
