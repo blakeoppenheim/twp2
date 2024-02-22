@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import Button from "../ui/Button";
 import phoneIcon from "./../../assets/icons/phone.svg";
 import emailIcon from "./../../assets/icons/email.svg";
+import LogoFooter from "./../../assets/icons/logoFooter.svg";
 
 function Footer() {
   const navigate = useNavigate();
@@ -33,7 +34,13 @@ function Footer() {
         <p className="country-title"></p>
       </div>
       <div className="footer-bottom__section">
-        <h3 className="logo-title">TWP</h3>
+        <div className="logo-footer__container">
+          <img
+            className="logo-footer"
+            src={LogoFooter}
+            alt="The-Water-People-logo"
+          />
+        </div>
         <div className="footer-info">
           <ul className="info-list">
             <li>Reach us</li>
@@ -91,7 +98,7 @@ function Footer() {
       </div>
       <h4 className="copy-right__title">
         <span>&#169;</span>
-        2024 The Water People. All Rights Reserved.
+        2024 TheWaterPeople. All Rights Reserved.
       </h4>
     </footer>
   );

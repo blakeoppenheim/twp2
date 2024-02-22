@@ -1,8 +1,9 @@
 import React from "react";
 import useWindowDimensions from "../../../hooks/UseWindowDimention";
 
-function OurWorkWrapper({ icon, iconName, bgColor, bgIcon }) {
+function OurWorkWrapper({ data }) {
   const { width } = useWindowDimensions();
+  const { icon, iconName, bgColor, bgIcon } = data;
   return (
     <div
       style={{

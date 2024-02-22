@@ -80,9 +80,17 @@
   }
 
   & > .footer-bottom__section {
-    margin-top: 90px;
-    @media (max-width: 991px) {
-      margin-top: 50px;
+    margin-top: 50px;
+
+    & > .logo-footer__container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      & > .logo-footer {
+        @media (max-width: 991px) {
+          max-width: 67px;
+        }
+      }
     }
     & > .logo-title {
       font-size: 3.8rem;

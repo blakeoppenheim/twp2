@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useKeenSlider } from "keen-slider/react";
 import OurWorkWrapper from "./OurWorkWrapper";
 import useWindowDimensions from "../../hooks/UseWindowDimention";
-import { OUR_WORK } from "../../constants/ourWork";
 import { slider } from "../../utils/autoSlide";
 import "keen-slider/keen-slider.min.css";
 import FourSeasons from "./Sliders/FourSeasons";
