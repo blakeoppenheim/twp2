@@ -1,8 +1,7 @@
-import glassBottleIcon from "./../assets/icons/glassBottle.svg";
-import plasticBottleIcon from "./../assets/icons/bottlesPlastic.svg";
+import glassBottleIcon from "./../assets/icons/glassBootleIcon.svg";
+import plasticBottleIcon from "./../assets/icons/plasticBotlleIcon.svg";
 import aluminumBottleIcon from "./../assets/icons/aluminumBottle.svg";
-export const
-  glassBottle = {
+export const glassBottle = {
   id: 1,
   specialWord: "",
   type: "glass",
