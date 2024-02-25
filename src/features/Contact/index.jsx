@@ -70,15 +70,6 @@ function Contact() {
               <input className="phone-number__field" type="text" />
             </div>
           </div>
-          <div className="subjects-container">
-            <h3 className="subjects-title">Select Subject ?</h3>
-            <div className="subjects">
-              <div className="inquiry-container">
-                <input name="subject" type="radio" />
-                <label className="inquiry-container">General Inquiry</label>
-              </div>
-            </div>
-          </div>
           <div className="message-container">
             <label>message</label>
             <input
