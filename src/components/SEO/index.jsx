@@ -17,7 +17,6 @@ function SEO({ metaTitle, metaDescription, metaKeywords, metaImage, url }) {
       <meta property="og:image" content={metaImage || logo} />
       <meta property="og:url" content={url} />
       <meta property="og:type" content="website" />
-      <meta property="fb:app_id" content="1234567890" />
 
       {/* Twitter Card meta tags for Twitter sharing */}
       <meta name="twitter:card" content="summary_large_image" />
