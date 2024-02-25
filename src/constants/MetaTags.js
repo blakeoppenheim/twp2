@@ -1,6 +1,3 @@
-import HomePageImage from "./../assets/icons/home-page.png";
-import ContactPageImage from "./../assets/icons/contact-page.png";
-
 export const metaTagsHomePage = {
   metaTitle: "TheWaterPeople",
   metaDescription:

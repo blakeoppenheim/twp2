@@ -12,6 +12,7 @@ function SEO({ metaTitle, metaDescription, metaKeywords, metaImage, url }) {
       <link rel="shortcut icon" href={logo} />
 
       {/* Open Graph meta tags for social media sharing */}
+      <meta name="og:card" content="summary_large_image" />
       <meta property="og:title" content={metaTitle} />
       <meta property="og:description" content={metaDescription} />
       <meta property="og:image" content={metaImage || logo} />
