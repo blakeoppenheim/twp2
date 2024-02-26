@@ -12,7 +12,7 @@ function HomeDetails() {
         Discover elegance with our custom-labeled bottled water, perfect for
         adding a personal <br />
         touch to any event or brand. Quality meets style for a truly refreshing
-        experince.
+        experience.
       </p>
       <Button
         link={"/twp/contact-us"}
